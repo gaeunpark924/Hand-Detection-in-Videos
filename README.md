@@ -1,5 +1,5 @@
 - 디지털 영상처리 과제
-## Hand Detection in Videos
+## 🙋‍ Hand Detection in Videos 
 **1. 영상 데이터 프레임 단위로 나누기**
 ```Python
 video_file = 'test.mov'
@@ -94,7 +94,7 @@ def four_connect(src):
     return pad
 ```
 
-## 결과
+## ✌ 결과
 <p>
   <img src="https://user-images.githubusercontent.com/51811995/158065662-14b73f8b-f581-4f12-a84c-4b6b211d359c.png" width=400>
   <img src="https://user-images.githubusercontent.com/51811995/158065764-8e2e4ce2-c74e-49ff-9222-d1181e325c36.png" width=400>
