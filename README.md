@@ -1,6 +1,5 @@
 - 디지털 영상처리 과제
-
-## Hand-Detection
+## Hand Detection in Videos
 **1. 영상 데이터 프레임 단위로 나누기**
 ```Python
 video_file = 'test.mov'
