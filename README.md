@@ -1,6 +1,13 @@
 - 디지털 영상처리 과제
-## 🙋‍ Hand Detection in Videos 
-**1. 영상 데이터 프레임 단위로 나누기**
+
+## 🙋‍ Hand Detection in Videos
+
+|before|after|
+|---|---|
+|<img src="https://user-images.githubusercontent.com/51811995/158065611-a52f256f-5b78-4a12-89f5-084ef7d73cc7.jpg" width=400>|<img src="https://user-images.githubusercontent.com/51811995/158065662-14b73f8b-f581-4f12-a84c-4b6b211d359c.png" width=400>|
+  
+
+### 1. 영상 데이터 프레임 단위로 나누기
 ```Python
 video_file = 'test.mov'
 cap = cv2.VideoCapture(video_file)
@@ -23,7 +30,7 @@ while(cap.isOpened()):
   <img src="https://user-images.githubusercontent.com/51811995/158065716-7709cb57-85ff-4098-8cb7-4deb43522c48.jpg" width=400>
 </p>
 
-**2. Skin-Color 모델**
+### 2. Skin-Color 모델
 - HSI 값을 이용하여 skin color 모델 구축
 ```Python
 def hand_color_model(H,S,I):
@@ -39,7 +46,7 @@ def hand_color_model(H,S,I):
     return dst
 ```
 
-**3. Binary 이미지 생성**
+### 3. Binary 이미지 생성
 - Skin-color model을 이용하여 thresholding 하여 foreground와 background 구별
 - 피부색이 있는 부분은 1로 없는 부분은 0으로 마킹
 
@@ -48,7 +55,7 @@ def hand_color_model(H,S,I):
   <img src="https://user-images.githubusercontent.com/51811995/158066368-be41665c-6c0b-44ae-a08c-2f33c8a65443.png" width=400>
 </p>
 
-**4. Connected Component Labeling**
+### 4. Connected Component Labeling
 - 4-connectivity 사용해서 Conected Component Labeling
 ```Python
 def four_connect(src):
@@ -94,7 +101,7 @@ def four_connect(src):
     return pad
 ```
 
-## ✌ 결과
+### ✌ 결과
 <p>
   <img src="https://user-images.githubusercontent.com/51811995/158065662-14b73f8b-f581-4f12-a84c-4b6b211d359c.png" width=400>
   <img src="https://user-images.githubusercontent.com/51811995/158065764-8e2e4ce2-c74e-49ff-9222-d1181e325c36.png" width=400>
